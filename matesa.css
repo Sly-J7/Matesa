@@ -1,0 +1,612 @@
+html
+{
+ margin: 0;
+ padding: 0;
+ scroll-behavior: smooth;
+}
+header, .header
+{
+  background-color: white;
+  height: auto;
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  top: 0;
+  z-index: 100;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  box-shadow: 3px 0 6px 0 #F2F6FB,3px 0 6px 0 #F2F6FB;
+  box-sizing: border-box;
+}
+.leftDiv
+{
+width: 30%;
+display: flex;
+flex-direction: row;
+align-items: baseline;
+margin: auto;
+}
+.centerDiv
+{
+width: 40%;
+display: flex;
+flex-direction: row;
+ justify-content: center;
+ align-items: baseline;
+ margin: 0.5em 0;
+}
+.rightDiv
+{
+width: 30%;
+display: flex;
+flex-direction: row;
+align-items: baseline;
+margin: auto;
+}
+@media only screen and (min-width: 550px){
+  /* For desktop: */
+.header { 
+  width: 100%; 
+  padding: 0; 
+  margin: 0;
+  height: auto;
+  }
+}
+.container
+{
+  display: block;
+  cursor: pointer;
+  float: left;
+  position: relative;
+  margin: auto 0 auto 0.5em;
+  box-sizing: border-box;
+}
+.bar2
+{
+  width: 0.8em;
+  aspect-ratio; 4/3;
+  height: 0.1em;
+  background-color: #151B8D;
+  margin: 0.3em 0;
+  transition: 0.4s;
+  object-fit: fill;
+}
+.bar1, .bar3
+{
+  width: 1.1em;
+  height: 0.1em;
+  aspect-ratio; 4/3;
+  background-color: #151B8D;
+  margin: 0.1em 0;
+  transition: 0.4s;
+  object-fit: fill;
+}
+@media only screen and (min-width: 1000px){
+  /* For desktop: */
+.bar2 {
+  width: 1em;
+  height: 0.1em;
+  margin: 0.5em 0;
+  }
+.bar1, .bar3 {
+  width: 1.4em;
+  height: 0.1em;
+  margin: 0.3em 0;
+  }
+}
+h1
+{
+  position: relative;
+  font-weight: 700;
+  color: #151B8D;
+  font-size: 1.3em;
+  font-family: "Sofia", sans-serif;
+  text-align: center;
+  padding: 0;
+  margin: auto;
+  display: block;
+  text-shadow: 0.1em 0.1em #EBE9EB;
+}
+.matLogo
+{
+  width: 30%;
+  aspect-ratio: 4/3;
+  position: relative;
+  padding: 0;
+  margin:  auto 0.5em auto auto;;
+  display: block;
+  float: right;
+}
+@media only screen and (min-width: 600px){
+.matLogo
+{ 
+  width: 3em;
+  aspect-ratio: 4/3;
+  position: relative;
+  padding: 0;
+  margin: auto 1.5em auto auto;
+  display: block;
+  float: right;
+ }
+.container
+{
+  margin: auto 0 auto 1.5em;
+ }
+}
+@media only screen and (min-width: 850px) {
+.matLogo
+{
+  width: 3.5em;
+  aspect-ratio: 4/3;
+  position: relative;
+  padding: 0;
+  margin: auto 1.5em auto auto;
+  display: block;
+  float: right;
+ }
+.container
+{
+  margin: auto 0 auto 1.5em;
+ }
+}
+.content
+{
+   margin: 0.5em;
+   padding: 0;
+   display: block;
+   position: relative;
+   background-color: white;
+   width: 98%;
+   height: auto;
+   overflow: clip;
+   margin: auto;
+   box-sizing: border-box;
+   font-family:Helvetica, Verdana,Arial,sans-serif	;
+}
+@media only screen and (min-width: 550px){
+.content
+{
+ width: 95%;
+ height: 50%;
+ margin: auto;
+ display: block;
+ }
+h1
+{
+position: relative;
+  font-weight: 700;
+  color: #151B8D;
+  font-size: 2em;
+  text-align: center;
+  padding: 0;
+  margin: auto;
+  display: block;
+  text-shadow: 0.1em 0.1em #EBE9EB;
+ }
+}
+@media only screen and (min-width: 850px) {
+h1
+{
+  text-align: center;
+  margin: auto;
+ }
+}
+.sidenav
+{
+  height: 100%;
+  width: 0; /* 0 width - changes with JavaScript */
+  position: fixed;
+  top: 0; /* Stay at the top */
+  left: 0;
+  background-color: #270e59;
+  overflow-x: hidden;
+  padding-top: 2em; /* Place content 60px from the top */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+  z-index: 200;
+}
+.sidenav a
+{
+  padding: 0.5em 0.5em 0.5em 0.5em;
+  text-decoration: none;
+  font-size: 1.1em;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+  margin-left: 1.5em;
+}
+.sidenav a:hover
+{
+  color: #f1f1f1;
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn
+{
+  position: absolute;
+  top: 0;
+  right: 1em;
+  font-size: 2.5em;
+  margin-left: ;
+  float: right;
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+  transition: margin-left .5s;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  position: -webkit-sticky;
+  position: sticky;
+  display: flex;
+  overflow: scroll;
+  flex-direction: column;
+  height: auto;
+  font-family:Helvetica, Verdana,Arial,sans-serif	;
+}
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+.sticky
+{
+ opacity: 1;
+ z-index: 100;
+}
+/* Rotate first bar */
+.change .bar1 {
+  transform: translate(0, 11px) rotate(-45deg);
+}
+
+/* Fade out the second bar */
+.change .bar2 {opacity: 0;}
+
+/* Rotate last bar */
+.change .bar3 {
+  transform: translate(0, -11px) rotate(45deg);
+}
+/* Style all font awesome icons */
+body
+{
+ padding: 0;
+ top: 0;
+ margin: auto;
+ width: 100%;
+ position: relative;
+ z-index: -1;
+ background-color: white;
+ color: black;
+ overflow: scroll;
+ height: auto;
+ display: flex;
+ flex-direction: column;
+ box-sizing: border-box;
+ font-family:Helvetica, Verdana,Arial,sans-serif	;
+}
+.fa
+{
+  padding: 20px;
+  font-size: 1em;
+  width: 5vw;
+  text-align: center;
+  text-decoration: none;
+  background-color: ;
+  color: #001F3F;
+  border-radius: 50%;
+}
+/* hover effect*/
+.fa:hover
+{
+ opacity: 0.7;
+}
+p
+{
+  font-size: 0.9em;
+  color: ;
+  font-family:Helvetica, Verdana,Arial,sans-serif	;
+  font-weight: 100;
+}
+h2
+{
+  font-size: 2em;
+  color: black;
+  font-family: Didot, serif;
+  font-weight: 100;
+}
+@media screen and (min-width: 650px) {
+h2
+{
+  font-size: 3.5em;
+ }
+.blogDate
+{
+ font-size: 2em;
+ }
+}
+h3
+{
+  font-size: 1.7em;
+  font-family: Didot, serif;
+  font-weight: 100;
+  color: ;
+}
+h4
+{
+  float: center;
+  text-align: center;
+  margin-top: 1.5em;
+  color: black;
+  font-family: Bodoni Moda;
+}
+.blogDate
+{
+ margin-left: 2vw; 
+ font-family: Bodoni Moda; 
+ color: black;
+ font-size: 1em;
+}
+.comment
+{
+  font-size: 1em;
+  color: #808080;
+  margin-top: 0;
+  width: 80%;
+  margin: auto auto auto auto;
+}
+.date
+{
+  color: #808080;
+  text-align: right;
+  position: relative;
+}
+.across
+{
+  max-width: 100%;
+  aspect-ratio: 21/9;
+  padding: 0;
+  margin: 0;
+  background-size: cover;
+  box-sizing: border-box;
+  display: block;
+}
+.inside
+{
+  max-width: 70%;
+  aspect-ratio: 4/3;
+  display: block;
+  margin: auto;
+  box-sizing: border-box;
+}
+.wide
+{
+  width: 100%;
+  aspect-ratio: 21/9;
+  margin: auto;
+  background-size: cover;
+  display: block;
+  box-sizing: border-box;
+}
+.media
+{
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: auto;
+  box-sizing: border-box;
+}
+.media img
+{
+  width: 90%;
+  margin: auto;
+  display: block;
+  float: none;
+  aspect-ratio: 16/9;
+  box-sizing: border-box;
+}
+.media figcaption
+{
+  width: 90%;
+  margin: auto;
+  color: #3E3B39;
+  font-family:Helvetica, Verdana,Arial,sans-serif	;
+}
+hr
+{
+  height: 0.4em;
+  background: black;
+  width: 95%;
+  display: block;
+  margin: auto;
+}
+ol
+{
+  font-size: 2.vh;
+  margin-left: 2vw;
+  margin-right: 2vw;
+  color: #3E3B39;
+}
+.news
+{
+  width: 95%;
+  padding: 1vh 1vh 1vh 1vh;
+  position: relative;
+  margin: auto;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  display: block;
+  box-sizing: border-box;
+}
+a
+{
+  text-decoration: none;
+  color: #001F3F;
+  padding: 0;
+  margin: 0;
+}
+button 
+{
+  position: relative;
+  background-color: #001F3F;
+  border: none;
+  font-size: 1em;
+  color: #FFFFFF;
+  padding: 10px;
+  width: auto;
+  text-align: center;
+  transition-duration: 0.4s;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: pointer;
+  margin: auto;
+  display: block;
+}
+button:after
+{
+  content: "";
+  background: #f1f1f1;
+  display: block;
+  position: absolute;
+  padding-top: 300%;
+  padding-left: 350%;
+  margin-left: -20px !important;
+  margin-top: -120%;
+  opacity: 0;
+  transition: all 0.8s
+}
+button:active:after
+{
+  padding: 0;
+  margin: 0;
+  opacity: 1;
+  transition: 0s;
+}
+.about
+{
+  margin: auto;
+  width: 93%;
+  background-color: white;
+  border-radius: 1.5%;
+  padding: 2px 16px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  transition: 0.3s;
+  text-align: left;
+  color: black;
+  display: block;
+  position: relative;
+  z-index: 0;
+  box-sizing: border-box;
+}
+.report
+{
+  width: 100%;
+  height: auto;
+  white-space: nowrap;
+  overflow-x: auto;
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box;
+}
+.r1
+{
+  background-color: white;
+  margin: 1.5em;
+  width: 15em;
+  white-space: normal;
+  border-radius: 5%;
+  position: relative;
+  box-shadow: 0 4px 8px 0 #F2F6FB, 0 6px 20px 0 #F2F6FB;
+  box-sizing: border-box;
+}
+.r1 img, .r1Adv img
+{
+  width: 15em;
+  aspect-ratio: 4/3;
+  padding: 0;
+  margin:0;
+  display: block;
+  position: relative;
+  box-sizing: border-box;
+}
+.r1 p, .r1Adv p
+{
+  padding: 2em;
+  width: 90%;
+  text-align: left;
+  margin: auto;
+}
+figure
+{
+  width: 100%;
+  position: relative;
+  height: auto;
+  display: block;
+  box-sizing: border-box;
+}
+figcaption
+{
+  width: 55%;
+  float: right;
+  color: #3E3B39;
+  font-family:Helvetica, Verdana,Arial,sans-serif	;
+  font-size: 1em;
+  display: block;
+  position: relative;
+  margin: auto;
+}
+.articles
+{
+  margin: auto;
+  width: 2px 16px;
+  background-color: white;
+  border-radius: ;
+  padding: 10px 10px;
+  box-shadow: 0 4px 8px 0 #F2F6FB, 0 6px 20px 0 #F2F6FB;
+  transition: 0.3s;
+  text-align: left;
+  color: black;
+  display: block;
+  position: relative;
+  z-index: 0;
+  box-sizing: border-box;
+}
+.cube
+{
+  width: 100%;
+  float: ;
+  aspect-ratio: 16/9;
+  border-radius: ;
+  display: block;
+  margin: auto;
+}
+@media only screen and (min-width: 850px) {
+.cube 
+{
+  width: 50%;
+  margin: auto auto auto 0;
+  padding: 2em;
+  float: left;
+ }
+}
+.blog
+{
+  position: relative;
+  padding: 1em;
+  background: white;
+  margin: auto;
+  width: 95%;
+  box-sizing: border-box;
+}
+.blog::first-letter
+{
+  font-size: 5em;
+}
+footer
+{
+ display:flex;
+ flex-direction: column;
+ white-space:nowrap;
+ box-sizing: border-box;
+}

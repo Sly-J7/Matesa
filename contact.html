@@ -1,0 +1,179 @@
+<!doctype html>
+<html>
+<head>
+<link rel="icon" type="image/x-icon" href="images/matfav.jpg">
+<title>Contact Us | MATESA-KNUST</title>
+    <meta name="description" content="Get in touch with us. As a student instituition, we are ready to grow with your concerns and reviews">
+    <meta name="keywords" content="MATESA,MATESA KNUST,materials engineering,metallurgical engineering">
+    <meta property="og:image" content="https://sly-j7.github.io/Matesa/images/matfav.jpg" />
+    <meta property="og:locale" content="en_US">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Contact Us | MATESA-KNUST">
+    <meta property="og:description" content="Get in touch with us. As a student instituition, we are ready to grow with your concerns and reviews">
+        <meta name="google-site-verification" content="TzUzBu9kzqBTx8DmLBe3p9E68brdx6U2EUXH3WPsf4Y" />
+    <meta property="og:url" content="https://sly-j7.github.io/Matesa/contact.html">
+    <meta property="og:site_name" content="Contact Us | MATESA-KNUST">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+<link rel="author" href="https://t.me/Sly_J7">
+<link href="https://css-tricks.com/snippets/css/using-font-face/" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="matesa.css" >
+<script type="text/javascript" src="matesa.js"></script>
+
+<style>
+form
+{
+ width: 80%;
+ display: flex;
+ flex-direction: column;
+ margin: 2em;
+ padding: 2em;
+ border-radius: 5%;
+ box-shadow: 3px 0 6px 0 #F2F6FB,3px 0 6px 0 #F2F6FB;
+ box-sizing: border-box;
+ background-color: white;
+}
+  form:hover
+  {
+  border-color: green;
+  }
+.message
+{
+  height: 20vw;
+  border-width: 0 0 0.1em 0;
+}
+input[type=text]
+{
+  border-width: 0 0 0.1em 0;
+}
+  input[type=text]
+  {
+  border-color: green;
+  }
+input[type=submit]
+{
+  width: 30%;
+  margin: 2em auto;
+  background-color: #270e59;
+  padding: 2em;
+  text-align: center;
+  font-size: 1em;
+}
+.formParent
+{
+ background-color: #F2F6FB;
+ width: 100%;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+}
+</style>
+
+</head>
+
+<!-- side navigation menu -->
+<div id="mySidenav" class="sidenav">
+ <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="index.html">Home</a>
+  <a href="Programs.html">Programs</a>
+  <a onclick="message()">Articles</a>
+  <a onclick="reports.html">Reports</a>
+   <a href="MIH.html">The MIH</a>
+  <a href="aboutmatesa.html">About MATESA</a>
+  <a href="executives.html">MATESA Executives</a>
+  <a onclick="message()">Contact</a>
+</div>
+
+<div id="main">
+<!-- all page content inside this div are pushed when the sidenav is in action-->
+               <body id="body">
+
+<h2 style="text-align:center;">CONTACT US</h2>
+
+
+
+<div class="formParent">
+<form id="javascript_form">
+<h3 style="text-align:center;">Send us a review or a question</h3>
+<p>Email</p>
+    <input type="text" name="subject" placeholder="" required>
+    <p>Message</p>
+    <textarea name="text" placeholder="" class="message" required></textarea>
+    <input type="submit" id="js_send" value="Send" />
+
+</form>
+<br /><br />
+</div>
+
+<script>
+    var form_id_js = "javascript_form";
+
+    var data_js = {
+        "access_token": "7b5t2dcvfr2n1gtjwxuam2c2"
+    };
+
+    function js_onSuccess() {
+        alert("Mail successfuly sent")
+    }
+
+    function js_onError(error) {
+        alert("Error in input, refresh page")
+    }
+
+    var sendButton = document.getElementById("js_send");
+
+    function js_send() {
+        sendButton.value='Sending…';
+        sendButton.style.color="white"
+        sendButton.disabled=true;
+        var request = new XMLHttpRequest();
+        request.onreadystatechange = function() {
+            if (request.readyState == 4 && request.status == 200) {
+                js_onSuccess();
+            } else
+            if(request.readyState == 4) {
+                js_onError(request.response);
+            }
+        };
+
+        var subject = "MATESA : Message from " + document.querySelector("#" + form_id_js + " [name='subject']").value;
+        var message = document.querySelector("#" + form_id_js + " [name='text']").value;
+        data_js['subject'] = subject;
+        data_js['text'] = message;
+        var params = toParams(data_js);
+
+        request.open("POST", "https://postmail.invotes.com/send", true);
+        request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+
+        request.send(params);
+
+        return false;
+    }
+
+    sendButton.onclick = js_send;
+
+    function toParams(data_js) {
+        var form_data = [];
+        for ( var key in data_js ) {
+            form_data.push(encodeURIComponent(key) + "=" + encodeURIComponent(data_js[key]));
+        }
+
+        return form_data.join("&");
+    }
+
+    var js_form = document.getElementById("form_id_js");
+    js_form.addEventListener("submit", function (e) {
+        e.preventDefault();
+    });
+</script>
+
+
+
+</body>
+<script type=text/javascript src="footer3.js">
+</script>
+</div><!-- end of main div -->
+</html>
