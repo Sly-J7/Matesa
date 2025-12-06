@@ -30,7 +30,7 @@ rightDiv.appendChild(menuIcon);
 var headText = document.createElement("h1");
 var textLink = document.createElement("a");//h1 link
 textLink.textContent="MATESA";
-textLink.href="index.html";
+textLink.href="https://matesa.space/";
 headText.appendChild(textLink);
 centerDiv.appendChild(headText);
 // Matesa logo
@@ -42,7 +42,7 @@ mateLogo.addEventListener("click", openLink);
 leftDiv.appendChild(mateLogo);
 function openLink()
   {
-  window.open("index.html","_self");
+  window.open("https://matesa.space","_self");
   }
 header.append(rightDiv,centerDiv,leftDiv);
 {
@@ -50,14 +50,39 @@ document.getElementById("main").prepend(header)
 }
 {
 var sideNav = document.getElementById("mySidenav")
-gall = sideNav.children[4];
+var home =sideNav.children[0];
+home.textContent="Home";
+home.href="https://matesa.space/"; 
+
+var proGrams =sideNav.children[1];
+proGrams.textContent="Prgrams";
+proGrams.href="https://matesa.space/Programs.html";
+
+var articles =sideNav.children[2];
+articles.textContent="Articles";
+articles.href=message;
+
+var gall =sideNav.children[3];
 gall.textContent="Gallery";
-gall.href="matgallery.html";
-report = sideNav.children[8];
+gall.href="https://matesa.space/matgallery.html";
+
+mih = sideNav.children[4];
+mih.textContent="The MIH";
+mih.href="https://matesa.space/MIH.html";
+
+var about =sideNav.children[5];
+about.textContent="About Us";
+about.href="https://matesa.space/about.html";
+
+var exe =sideNav.children[6];
+exe.textContent="MATESA Executives";
+exe.href="https://matesa.unaux.com/executives.html";
+
+report = sideNav.children[7];
 report.textContent="Reports";
 report.href=message;
-}
-var cont =document.createElement("a");
+
+var cont =sideNav.children[8];
 cont.textContent="Contact";
-cont.href="contact.html";
-sideNav.appendChild(cont);
+cont.href="https://matesa.space/contact.html";
+}
