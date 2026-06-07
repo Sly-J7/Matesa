@@ -30,7 +30,7 @@ rightDiv.appendChild(menuIcon);
 var headText = document.createElement("h1");
 var textLink = document.createElement("a");//h1 link
 textLink.textContent="MATESA";
-textLink.href="https://matesa.space/";
+textLink.href="https://sly-j7.github.io/Matesa/";
 headText.appendChild(textLink);
 centerDiv.appendChild(headText);
 // Matesa logo
@@ -42,7 +42,7 @@ mateLogo.addEventListener("click", openLink);
 leftDiv.appendChild(mateLogo);
 function openLink()
   {
-  window.open("https://matesa.space","_self");
+  window.open("https://sly-j7.github.io/Matesa","_self");
   }
 header.append(rightDiv,centerDiv,leftDiv);
 {
@@ -52,11 +52,11 @@ document.getElementById("main").prepend(header)
 var sideNav = document.getElementById("mySidenav")
 var home =sideNav.children[1];
 home.textContent="Home";
-home.href="https://matesa.space/"; 
+home.href="https://sly-j7.github.io/Matesa/"; 
 
 var proGrams =sideNav.children[2];
 proGrams.textContent="Prgrams";
-proGrams.href="https://matesa.space/Programs.html";
+proGrams.href="https://sly-j7.github.io/Matesa/Programs.html";
 
 var articles =sideNav.children[3];
 articles.textContent="Articles";
@@ -64,15 +64,15 @@ articles.href=message;
 
 var gall =sideNav.children[4];
 gall.textContent="Gallery";
-gall.href="https://matesa.space/matgallery.html";
+gall.href="https://sly-j7.github.io/Matesa/matgallery.html";
 
 mih = sideNav.children[5];
 mih.textContent="The MIH";
-mih.href="https://matesa.space/MIH.html";
+mih.href="https://sly-j7.github.io/Matesa/MIH.html";
 
 var about =sideNav.children[6];
 about.textContent="About Us";
-about.href="https://matesa.space/about.html";
+about.href="https://sly-j7.github.io/Matesa/about.html";
 
 var exe =sideNav.children[7];
 exe.textContent="MATESA Executives";
@@ -84,6 +84,6 @@ report.href=message;
 
 var cont = document.createElement("a");
 cont.textContent="Contact";
-cont.href="https://matesa.space/contact.html";
+cont.href="https://sly-j7.github.io/Matesa/contact.html";
 sideNav.appendChild(cont);
 }
