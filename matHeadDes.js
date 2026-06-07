@@ -18,7 +18,7 @@ document.head.append(ogWidth,ogRatio)
 }
 var author= document.createElement("link");
 author.rel="author";
-author.href="https://t.me/Sly_J7";
+author.href="https://sly-j7.github.io/SlyPortfolio/";
 {
 document.head.appendChild(author);
 }
